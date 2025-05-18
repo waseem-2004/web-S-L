@@ -13,8 +13,11 @@ class TableController extends Controller
      */
     public function index()
     {
-         $data['Table'] =  \App\Models\Table ::all(); 
-         return $data;
+         //$data['Table'] =  \App\Models\Table ::all(); 
+        // return $data;
+         $tables = \App\Models\Table::all(); 
+       return view('tables.index', compact('tables'));
+
     }
 
     /**
